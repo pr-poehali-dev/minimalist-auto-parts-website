@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import CarScheme from "./pages/CarScheme";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
           <Route path="/catalog" element={<Index />} /> {/* Временная заглушка */}
           <Route path="/comparison" element={<Index />} /> {/* Временная заглушка */}
           <Route path="/guide" element={<Index />} /> {/* Временная заглушка */}
+          <Route path="/car-scheme/:vinNumber" element={<CarScheme />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

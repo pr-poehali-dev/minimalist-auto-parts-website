@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { ShoppingCart, Tools, Home, BarChart2, FileText } from "lucide-react";
+import Cart from "./Cart";
 
 interface LayoutProps {
   children: ReactNode;
@@ -62,6 +63,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+          
+          <Cart />
         </div>
       </header>
       
